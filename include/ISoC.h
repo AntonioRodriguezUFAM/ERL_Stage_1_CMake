@@ -10,6 +10,9 @@ public:
     virtual ~ISoC() {}
     virtual void setup() = 0;
     virtual void run() = 0; // New method for continuous execution
+
+    // Pure virtual function for profiling hardware
+    virtual std::string profileHardware() = 0;
 };
 
 #endif // ISOC_H
