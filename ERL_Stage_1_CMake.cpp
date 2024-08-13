@@ -8,7 +8,7 @@
 
 using namespace std;
 
-
+#define _CRT_SECURE_NO_WARNINGS
 
 #include "include/ConcreteComponentFactory.h"
 #include "include/SensorCaptureConcrete.h"

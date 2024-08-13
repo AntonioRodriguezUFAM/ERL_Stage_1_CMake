@@ -8,7 +8,7 @@ project ("ERL_Stage_1_CMake")
 # Set the C++ standard
 set(CMAKE_CXX_STANDARD 17)
 
-set(CMAKE_CXX_COMPILER "path/to/your/c++/compiler")
+#set(CMAKE_CXX_COMPILER "path/to/your/c++/compiler")
 #set(CMAKE_C_COMPILER "path/to/your/c/compiler")
 
 # Include directories

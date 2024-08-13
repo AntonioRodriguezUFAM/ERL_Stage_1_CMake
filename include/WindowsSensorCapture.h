@@ -10,6 +10,7 @@ class WindowsSensorCapture : public ISensorCapture {
 public:
     void capture() override {
         // Capture system statistics using Windows Performance Recorder (WPR)
+        std::cout << "Capture Sensor" << std::endl;
         WindowsHardwareProfiler profiler;
         profilingData = profiler.profileHardware();
     }
