@@ -14,40 +14,47 @@
 #include "OptimizationConcrete.h"
 #include "ConstraintsConcrete.h"
 #include "HistoricalDataConcrete.h"
+#include "SystemCharacterizationConcrete.h"
 
-// Include the headers for the concrete classes of Data, Optimization, Constraints, HistoricalData
+// Include the headers for the concrete classes of Data, Optimization, Constraints, HistoricalData, SystemCharacterization
 
 class ConcreteComponentFactory : public IComponentFactory {
 public:
-
     ISoC* createSoC() override {
         std::cout << "Create SoC..." << std::endl;
-        return new SoCConcrete();
+        return new SoCConcrete();  // Return an instance of the concrete SoC class
     }
+
     IAlgorithm* createAlgorithm() override {
         std::cout << "Create Algorithm..." << std::endl;
-        return new AlgorithmConcrete();
+        return new AlgorithmConcrete();  // Return an instance of the concrete Algorithm class
     }
+
     IData* createData() override {
-        // Return an instance of the concrete Data class
         std::cout << "Create Data..." << std::endl;
-        return new DataConcrete();
+        return new DataConcrete();  // Return an instance of the concrete Data class
     }
+
     IOptimization* createOptimization() override {
-        // Return an instance of the concrete Optimization class
         std::cout << "Create Optimization..." << std::endl;
-        return new OptimizationConcrete();
+        return new OptimizationConcrete();  // Return an instance of the concrete Optimization class
     }
+
     IConstraints* createConstraints() override {
-        // Return an instance of the concrete Constraints class
         std::cout << "Create Constraints..." << std::endl;
-        return new ConstraintsConcrete();
+        return new ConstraintsConcrete();  // Return an instance of the concrete Constraints class
     }
+
     IHistoricalData* createHistoricalData() override {
-        // Return an instance of the concrete HistoricalData class
         std::cout << "Create HistoricalData..." << std::endl;
-        return new HistoricalDataConcrete();
+        return new HistoricalDataConcrete();  // Return an instance of the concrete HistoricalData class
+    }
+
+    ISystemCharacterization* createSystemCharacterization() override {
+        std::cout << "Create SystemCharacterization..." << std::endl;
+        return new SystemCharacterizationConcrete();  // Return an instance of the concrete SystemCharacterization class
     }
 };
 
 #endif // CONCRETECOMPONENTFACTORY_H
+

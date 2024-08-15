@@ -6,6 +6,8 @@
 #include <iostream>
 #include <thread>
 #include <chrono>
+#include <csignal>
+#include <atomic>
 
 class SystemManagerConcrete : public ISystemManager {
 public:
@@ -25,7 +27,7 @@ public:
         pthread_create(&threads[5], nullptr, runHistoricalData, static_cast<void*>(historicalData));
 
         // Main loop for continuous data capture and system characterization
-        while (true) {
+        while (running) {
             soc->sensorCapture(); // Capture data from the sensors through the SoC
             systemCharacterization->characterize(); // Perform system characterization based on the data
 
