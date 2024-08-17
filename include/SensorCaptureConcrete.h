@@ -18,6 +18,11 @@ public:
     void capture() override {
         std::cout << "Capturing data from sensors..." << std::endl;
         // Implement logic to capture data from sensors
+        // Continuous processing logic
+        while (true) {
+            std::cout << "Capturing data from sensors..." << std::endl;
+            std::this_thread::sleep_for(std::chrono::seconds(3)); // Simulate processing interval
+        }
     }
 
     void load() override {

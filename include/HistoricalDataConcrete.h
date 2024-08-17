@@ -21,7 +21,7 @@ public:
         // Continuous processing logic
         int count = 0;
         while (true) {
-            std::cout << "Running HistoricalData..."<<count << std::endl;
+         //   std::cout << "Running HistoricalData..."<<count << std::endl;
             count =count + 1;
             std::this_thread::sleep_for(std::chrono::seconds(3)); // Simulate processing interval
         }

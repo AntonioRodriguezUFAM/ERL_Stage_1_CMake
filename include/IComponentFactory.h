@@ -10,6 +10,9 @@
 #include "IOptimization.h"
 #include "IConstraints.h"
 #include "IHistoricalData.h"
+#include "ISensorCapture.h"
+#include "JetsonNanoSensorCapture.h"
+#include "ISystemCharacterization.h"
 
 class IComponentFactory {
 public:
@@ -20,6 +23,11 @@ public:
     virtual IOptimization* createOptimization() = 0;
     virtual IConstraints* createConstraints() = 0;
     virtual IHistoricalData* createHistoricalData() = 0;
+    virtual ISensorCapture* createSensorCapture() = 0;  // Add this method
+    virtual JetsonNanoSensorCapture*  JetsoncreateSensorCapture() = 0;  // Add this method Jetson NANO
+    
+    virtual ISystemCharacterization* createSystemCharacterization() = 0;
 };
 
 #endif // ICOMPONENTFACTORY_H
+

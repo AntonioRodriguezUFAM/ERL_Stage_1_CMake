@@ -20,7 +20,10 @@ public:
     std::string profileHardware() override {
         // Capture system statistics using TegraStats
         TegraStatsInfo tegraStats;
-        std::string tegrastatsOutput = tegraStats.captureData();
+         std::string tegrastatsOutput = tegraStats.captureData();
+        //std::string tegrastatsOutput = tegraStats.captureData();
+        
+        std::cout << tegrastatsOutput << std::endl;
 
         // Parse the output into a structured format
         JetsonNanoInfo info = parseTegraStats(tegrastatsOutput);
@@ -29,14 +32,14 @@ public:
         std::string formattedData = formatJetsonNanoInfo(info);
 
         // Save the structured data to a CSV file
-        const std::string filePath = "jetson_nano_tegrastats.csv";
+        const std::string filePath = "jetson_nano_tegrastats_updated.csv";
         exportToCSV(info, filePath);
 
         // Display the formatted data
         std::cout << "Formatted Data: " << formattedData << std::endl;
 
         // Optionally return the formatted string
-        return formattedData;
+        return tegrastatsOutput;//formattedData;
     }
 
 private:

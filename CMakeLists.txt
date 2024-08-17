@@ -16,7 +16,8 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 
 # Add source files
 set(SOURCES
-    ERL_Stage_1_CMake.cpp
+main.cpp
+   #ERL_Stage_1_CMake.cpp
  #   src/JetsonNanoHardwareProfiler.cpp
   #  src/WindowsHardwareProfiler.cpp
   #  src/SensorCaptureConcrete.cpp
@@ -27,6 +28,15 @@ set(SOURCES
 
 # Add executable
 add_executable(ERL_Stage_1_CMake ${SOURCES})
+
+# Link libraries (add pthread)
+#target_link_libraries(ERL_Stage_1_CMake pthread)
+
+
+# Link libraries
+find_package(Threads REQUIRED)
+target_link_libraries(ERL_Stage_1_CMake pthread)  # Add pthread here for Linux
+
 
 # Link libraries (if any)
 # target_link_libraries(ERL_Stage_1_CMake <library>)
