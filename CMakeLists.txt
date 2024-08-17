@@ -16,8 +16,13 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 
 # Add source files
 set(SOURCES
+<<<<<<< HEAD
 main.cpp
    #ERL_Stage_1_CMake.cpp
+=======
+     main.cpp
+     #ERL_Stage_1_CMake.cpp
+>>>>>>> 06ba67a782fc6ebd6ffe5bcf594acd23e136bf8c
  #   src/JetsonNanoHardwareProfiler.cpp
   #  src/WindowsHardwareProfiler.cpp
   #  src/SensorCaptureConcrete.cpp

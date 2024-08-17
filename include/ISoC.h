@@ -10,7 +10,11 @@ public:
     virtual ~ISoC() {}
     virtual void run() = 0;
     virtual void setup() = 0;
+<<<<<<< HEAD
     virtual void sensorCapture() = 0;  // New method for capturing sensor data
+=======
+    virtual void captureSensorData() = 0;  // New method for capturing sensor data
+>>>>>>> 06ba67a782fc6ebd6ffe5bcf594acd23e136bf8c
 };
 
 

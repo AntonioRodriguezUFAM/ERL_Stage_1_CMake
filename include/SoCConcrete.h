@@ -16,9 +16,12 @@ class SoCConcrete : public ISoC {
 public:
     void run() override {
         // Implementation of running the SoC
+<<<<<<< HEAD
         JetsonNanoHardwareProfiler profiler;
         std::string profilingData = profiler.profileHardware();
         std::cout << "Captured Sensor Data: " << profilingData << std::endl;
+=======
+>>>>>>> 06ba67a782fc6ebd6ffe5bcf594acd23e136bf8c
     }
 
     void setup() override {
@@ -26,7 +29,10 @@ public:
     }
 
     void sensorCapture() override {
+<<<<<<< HEAD
         std::cout << " Start sensor Capture class!! " << std::endl;
+=======
+>>>>>>> 06ba67a782fc6ebd6ffe5bcf594acd23e136bf8c
         JetsonNanoHardwareProfiler profiler;
         std::string profilingData = profiler.profileHardware();
         std::cout << "Captured Sensor Data: " << profilingData << std::endl;
